@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TgU-Rp-Ye4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2OK-re-nAu">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="iosstudy9_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="iosstudy10_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m6O-WJ-74H">
                                 <rect key="frame" x="10" y="409" width="373" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="SeR-6N-VQp"/>
                                 </connections>
@@ -158,7 +158,7 @@
         <!--Register View Controller-->
         <scene sceneID="ZVR-Nx-rmA">
             <objects>
-                <viewController storyboardIdentifier="RegisterVC" id="UVd-ef-faZ" customClass="RegisterViewController" customModule="iosstudy9_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" id="UVd-ef-faZ" customClass="RegisterViewController" customModule="iosstudy10_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w1W-hj-siz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,7 +234,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-L6-LCB">
                                         <rect key="frame" x="0.0" y="162" width="373" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -331,7 +331,7 @@
         <!--Profile View Controller-->
         <scene sceneID="LlU-ic-3PC">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xgv-dN-WWt" customClass="ProfileViewController" customModule="iosstudy9_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xgv-dN-WWt" customClass="ProfileViewController" customModule="iosstudy10_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aQZ-fr-5Eq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,10 +378,48 @@
             </objects>
             <point key="canvasLocation" x="2237.4045801526718" y="1434.5070422535211"/>
         </scene>
+        <!--릴스-->
+        <scene sceneID="zdo-6w-Bfj">
+            <objects>
+                <viewController storyboardIdentifier="ReelsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5KW-dZ-IBw" customClass="ReelsViewController" customModule="iosstudy10_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xro-yp-Rkq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nf7-Jf-DAy">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q0E-ym-XS0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x3g-Kz-dJ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Nf7-Jf-DAy" firstAttribute="leading" secondItem="x3g-Kz-dJ2" secondAttribute="leading" id="1WS-Y5-Tz1"/>
+                            <constraint firstItem="x3g-Kz-dJ2" firstAttribute="bottom" secondItem="Nf7-Jf-DAy" secondAttribute="bottom" id="NVL-BJ-jWa"/>
+                            <constraint firstItem="x3g-Kz-dJ2" firstAttribute="trailing" secondItem="Nf7-Jf-DAy" secondAttribute="trailing" id="Smx-SQ-IbT"/>
+                            <constraint firstItem="Nf7-Jf-DAy" firstAttribute="top" secondItem="x3g-Kz-dJ2" secondAttribute="top" id="ttp-dd-kLz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="릴스" id="kCB-F8-LqT"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Nf7-Jf-DAy" id="D1X-0w-QRd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5K-mN-L9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="1435"/>
+        </scene>
         <!--Home-->
         <scene sceneID="610-gI-9OG">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pwi-S9-drj" customClass="HomeViewController" customModule="iosstudy9_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pwi-S9-drj" customClass="HomeViewController" customModule="iosstudy10_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uls-eq-mqP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,6 +459,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_home_upload"/>
+                                        <connections>
+                                            <action selector="buttonGoAlbum:" destination="pwi-S9-drj" eventType="touchUpInside" id="5PA-rN-r98"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -455,14 +496,14 @@
                             <constraint firstItem="W6N-lD-6B1" firstAttribute="top" secondItem="eiS-z7-d5w" secondAttribute="bottom" id="rI5-Sr-erb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="yne-lv-Hqw"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="yne-lv-Hqw"/>
                     <connections>
                         <outlet property="tableView" destination="W6N-lD-6B1" id="MSW-TV-J27"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIy-72-UAy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674" y="1435"/>
+            <point key="canvasLocation" x="-453" y="1435"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8tq-hG-BXL">
@@ -472,9 +513,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="pwi-S9-drj" kind="relationship" relationship="viewControllers" id="U46-FM-Qqa"/>
+                        <segue destination="5KW-dZ-IBw" kind="relationship" relationship="viewControllers" id="F0A-yw-nW6"/>
                         <segue destination="i0k-K9-MuJ" kind="relationship" relationship="viewControllers" id="E4d-Q2-puk"/>
                     </connections>
                 </tabBarController>
@@ -504,7 +547,7 @@
         <scene sceneID="JCz-BL-SXB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i0k-K9-MuJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="1Gc-e5-0Nc"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="1Gc-e5-0Nc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sGV-pR-rIU">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -523,11 +566,13 @@
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -546,4 +591,3 @@
         </systemColor>
     </resources>
 </document>
-

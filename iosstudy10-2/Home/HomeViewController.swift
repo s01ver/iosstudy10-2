@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  iosstudy10-2
 //
-//  
+//  10주차 미션
 //
 
 import UIKit
@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var arrayCat : [FeedModel] = []
+    let imagePickerViewController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,15 @@ class HomeViewController: UIViewController {
         
         let input = FeedAPIInput(limit: 10, page: 0)
         FeedDataManager().feedDataManager(input, viewController: self)
+        
+        imagePickerViewController.delegate = self
     }
-
+    
+    @IBAction func buttonGoAlbum(_ sender: Any) {
+        self.imagePickerViewController.sourceType = .photoLibrary
+        self.present(imagePickerViewController, animated: true, completion: nil)
+    }
+    
 }
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
@@ -91,3 +99,14 @@ extension HomeViewController {
     }
 }
 
+extension HomeViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            let imageString = ""
+            let input = FeedUploadInput(content: "고양이", postImgsUrl: [imageString])
+            FeedUploadManager().posts(self, input)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+}
